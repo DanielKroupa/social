@@ -13,6 +13,7 @@ const MobileMenu = (props: Props) => {
       <div
         className="flex flex-col gap-[4.5px] cursor-pointer"
         onClick={() => setIsOpen((prev) => !prev)}
+        data-id="open-mobile-menu-btn"
       >
         <div
           className={`w-6 h-1 bg-blue-500 rounded-sm ${
@@ -31,12 +32,25 @@ const MobileMenu = (props: Props) => {
         />
       </div>
       {isOpen && (
-        <div className="absolute left-0 top-24 w-full h-[calc(100vh-96px)] bg-white flex flex-col items-center justify-center gap-8 font-medium text-xl z-10">
-          <Link href="/">Home</Link>
-          <Link href="/">Friends</Link>
-          <Link href="/">Groups</Link>
-          <Link href="/">Stories</Link>
-          <Link href="/">Login</Link>
+        <div
+          data-id="open-mobile-menu"
+          className="absolute left-0 top-24 w-full h-[calc(100vh-96px)] bg-white flex flex-col items-center justify-center gap-8 font-medium text-xl z-10"
+        >
+          <Link data-id="home-link" href="/">
+            Home
+          </Link>
+          <Link data-id="friends-link" href="/">
+            Friends
+          </Link>
+          <Link data-id="groups-link" href="/">
+            Groups
+          </Link>
+          <Link data-id="stories-link" href="/">
+            Stories
+          </Link>
+          <Link data-id="login-link" href="/">
+            Login
+          </Link>
         </div>
       )}
     </div>

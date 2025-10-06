@@ -2,12 +2,16 @@ import { ClerkProvider } from "@clerk/nextjs";
 import "./globals.css";
 
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+
+import { Poppins } from "next/font/google";
 
 import Navbar from "@/components/Navbar";
 import { ThemeProvider } from "@/context/ThemeContext";
 
-const inter = Inter({ subsets: ["latin"] });
+const poppins = Poppins({
+  weight: ["400", "500", "600", "700", "800"],
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Lama Dev Social Media App",
@@ -22,8 +26,21 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
+        <head>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+              try {
+                if (localStorage.getItem('theme') === 'dark' ||
+                    (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                  document.documentElement.classList.add('dark');
+                }
+              } catch (e) {}`,
+            }}
+          />
+        </head>
         <ThemeProvider>
-          <body className={inter.className}>
+          <body className={poppins.className}>
             <div className="w-full bg-white dark:bg-gray-900 md:px-4 lg:px-16 xl:px-32 2xl:px-64">
               <Navbar />
             </div>
