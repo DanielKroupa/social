@@ -21,9 +21,13 @@ const PostInfo = ({ postId }: { postId: number }) => {
         onClick={() => setOpen((prev) => !prev)}
       />
       {open && (
-        <div className="absolute top-4 right-0 bg-white w-32 p-4 rounded-lg flex flex-col gap-2 text-xs shadow-lg z-30">
-          <span className="cursor-pointer">View</span>
-          <span className="cursor-pointer">Re-post</span>
+        <div className="absolute top-4 right-0 bg-white dark:bg-gray-800 w-32 p-4 rounded-lg flex flex-col gap-2 text-xs shadow-md z-30">
+          <span className="cursor-pointer text-black dark:text-slate-500">
+            View
+          </span>
+          <span className="cursor-pointer text-black dark:text-slate-500">
+            Re-post
+          </span>
           <form action={deletePostWithId}>
             <button className="text-red-500">delete</button>
           </form>

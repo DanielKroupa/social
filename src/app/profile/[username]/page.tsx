@@ -79,23 +79,35 @@ const ProfilePage = async ({
                 className="w-32 h-32 rounded-full absolute left-0 right-0 m-auto object-cover -bottom-16 ring-4 ring-white"
               />
             </div>
-            <h1 className="mt-20 mb-4 text-2xl font-medium">
+            {/* Username */}
+            <h1 className="mt-20 mb-4 text-2xl font-medium text-black dark:text-slate-500">
               {user.name && user.surname
                 ? user.name + " " + user.surname
                 : user.username}
             </h1>
+
             <div className="flex items-center justify-center gap-12 mb-4">
+              {/* Number of posts */}
               <div className="flex flex-col items-center">
-                <span className="font-medium">{user._count.posts}</span>
-                <span className="text-sm">Posts</span>
+                <span className="font-medium dark:text-slate-500">
+                  {user._count.posts}
+                </span>
+                <span className="text-sm dark:text-slate-500">Posts</span>
               </div>
+
+              {/* Number of Followers */}
               <div className="flex flex-col items-center">
-                <span className="font-medium">{user._count.followers}</span>
-                <span className="text-sm">Followers</span>
+                <span className="font-medium dark:text-slate-500">
+                  {user._count.followers}
+                </span>
+                <span className="text-sm dark:text-slate-500">Followers</span>
               </div>
+              {/* Number of followings */}
               <div className="flex flex-col items-center">
-                <span className="font-medium">{user._count.followings}</span>
-                <span className="text-sm">Following</span>
+                <span className="font-medium dark:text-slate-500">
+                  {user._count.followings}
+                </span>
+                <span className="text-sm dark:text-slate-500">Following</span>
               </div>
             </div>
           </div>

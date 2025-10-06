@@ -72,7 +72,7 @@ const StoryList = ({
       >
         {({ open }) => {
           return (
-            <div className="flex flex-col items-center gap-2 cursor-pointer relative">
+            <div className="flex bg-white dark:bg-gray-900 flex-col items-center gap-2 cursor-pointer relative">
               <Image
                 src={img?.secure_url || user?.imageUrl || "/noAvatar.png"}
                 alt="Story"
@@ -88,7 +88,9 @@ const StoryList = ({
                   </button>
                 </form>
               ) : (
-                <span className="font-medium">Add a Story</span>
+                <span className="font-medium text-black dark:text-gray-500">
+                  Add a Story
+                </span>
               )}
               <div className="absolute text-6xl text-gray-200 top-1">+</div>
             </div>

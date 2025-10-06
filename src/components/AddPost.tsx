@@ -21,7 +21,7 @@ const AddPost = (props: Props) => {
   }
 
   return (
-    <div className="p-4 bg-white shadow-md rounded-lg flex gap-4 justify-between text-sm">
+    <div className="p-4 bg-white dark:bg-gray-900 shadow-md rounded-lg flex gap-4 justify-between text-sm">
       {/* AVATAR */}
       <Image
         src={user?.imageUrl || "/noAvatar.png"}
@@ -39,7 +39,7 @@ const AddPost = (props: Props) => {
             name="desc"
             placeholder="What's on your mind?"
             id=""
-            className="bg-slate-100 rounded-lg flex-1 p-2 outline-none"
+            className="bg-slate-100 text-black dark:text-slate-500 dark:bg-gray-800 rounded-lg flex-1 p-2 outline-none"
             onChange={(e) => setDesc(e.target.value)}
           ></textarea>
           <div className="">

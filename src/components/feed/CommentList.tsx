@@ -67,7 +67,7 @@ const CommentList = ({
           />
           <form
             action={add}
-            className="flex flex-1 items-center justify-between bg-slate-100 rounded-xl text-sm px-6 py-2 w-full"
+            className="flex flex-1 items-center justify-between bg-slate-100 dark:bg-slate-800 rounded-xl text-sm px-6 py-2 w-full"
           >
             <input
               type="text"

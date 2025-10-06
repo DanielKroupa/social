@@ -29,7 +29,7 @@ const ProfileCard = async (props: Props) => {
   if (!user) return null;
 
   return (
-    <div className='"p-4 bg-white rounded-lg shadow-md text-sm flex flex-col gap-6 p-4'>
+    <div className='"p-4 bg-white dark:bg-gray-900 rounded-lg shadow-md text-sm flex flex-col gap-6 p-4'>
       <div className="h-20 relative">
         <Image
           src={user.cover || "/noCover.png"}
@@ -46,7 +46,7 @@ const ProfileCard = async (props: Props) => {
         />
       </div>
       <div className="h-20 flex flex-col gap-2 items-center">
-        <span className="font-semibold">
+        <span className="font-semibold dark:text-white text-black">
           {user.name && user.surname
             ? user.name + " " + user.surname
             : user.username}

@@ -46,7 +46,7 @@ const PostInteraction = ({
     <>
       <div className="flex items-center justify-between text-sm my-4">
         <div className="flex gap-8">
-          <div className="flex items-center gap-4 bg-slate-300 p-2 rounded-xl">
+          <div className="flex items-center gap-4 bg-slate-300 dark:bg-slate-800 p-2 rounded-xl">
             <form action={likeAction}>
               <button>
                 <Image
@@ -65,7 +65,7 @@ const PostInteraction = ({
             </span>
           </div>
         </div>
-        <div className="flex items-center gap-4 bg-slate-200 p-2 rounded-xl">
+        <div className="flex items-center gap-4 bg-slate-200 dark:bg-slate-800 p-2 rounded-xl">
           <Image
             className="cursor-pointer"
             alt=""
@@ -80,7 +80,7 @@ const PostInteraction = ({
         </div>
       </div>
       <div className="">
-        <div className="flex items-center gap-4 bg-slate-200 p-2 rounded-xl">
+        <div className="flex items-center gap-4 bg-slate-200 dark:bg-slate-800 p-2 rounded-xl">
           <Image
             className="cursor-pointer"
             alt=""

@@ -41,10 +41,12 @@ const UpdateUser = ({ user }: { user: User }) => {
             action={(formData) =>
               formAction({ formData, cover: cover?.secure_url || "" })
             }
-            className="bg-white p-4 rounded-lg shadow-md flex flex-col gap-2 w-full md:w-1/2 xl:w-1/3 relative"
+            className="bg-white dark:bg-gray-900 p-4 rounded-lg shadow-md flex flex-col gap-2 w-full md:w-1/2 xl:w-1/3 relative"
           >
             {/* Title */}
-            <h1>Update profile</h1>
+            <h1 className="text-black font-semibold dark:text-slate-500">
+              Update profile
+            </h1>
             <div className="mt-4 text-xs text-gray-500">
               Use the navbar profile to change the avatar or username.
             </div>
@@ -59,7 +61,12 @@ const UpdateUser = ({ user }: { user: User }) => {
                     className="flex flex-col gap-4 my-4"
                     onClick={() => open()}
                   >
-                    <label htmlFor="">Cover picture</label>
+                    <label
+                      htmlFor=""
+                      className="text-black dark:text-slate-500"
+                    >
+                      Cover picture
+                    </label>
                     <div className="flex items-center gap-2 cursor-pointer">
                       <Image
                         src={user.cover || "/noCover.png"}
@@ -86,7 +93,7 @@ const UpdateUser = ({ user }: { user: User }) => {
                 <input
                   type="text"
                   placeholder={user.name || "John"}
-                  className="ring-1 ring-gray-300 p-[13px] rounded-md text-sm "
+                  className="ring-1 ring-gray-300 p-[13px] rounded-md text-sm dark:bg-slate-800 dark:ring-slate-700 dark:text-slate-500"
                   name="name"
                 />
               </div>
@@ -98,7 +105,7 @@ const UpdateUser = ({ user }: { user: User }) => {
                 <input
                   type="text"
                   placeholder={user.surname || "Lemon"}
-                  className="ring-1 ring-gray-300 p-[13px] rounded-md text-sm "
+                  className="ring-1 ring-gray-300 p-[13px] rounded-md text-sm dark:bg-slate-800 dark:ring-slate-700 dark:text-slate-500 "
                   name="surname"
                 />
               </div>
@@ -110,7 +117,7 @@ const UpdateUser = ({ user }: { user: User }) => {
                 <input
                   type="text"
                   placeholder={user.description || "Life is beautiful..."}
-                  className="ring-1 ring-gray-300 p-[13px] rounded-md text-sm "
+                  className="ring-1 ring-gray-300 p-[13px] rounded-md text-sm dark:bg-slate-800 dark:ring-slate-700 dark:text-slate-500"
                   name="description"
                 />
               </div>
@@ -122,7 +129,7 @@ const UpdateUser = ({ user }: { user: User }) => {
                 <input
                   type="text"
                   placeholder={user.city || "New York"}
-                  className="ring-1 ring-gray-300 p-[13px] rounded-md text-sm "
+                  className="ring-1 ring-gray-300 p-[13px] rounded-md text-sm dark:bg-slate-800 dark:ring-slate-700 dark:text-slate-500 "
                   name="city"
                 />
               </div>
@@ -134,7 +141,7 @@ const UpdateUser = ({ user }: { user: User }) => {
                 <input
                   type="text"
                   placeholder={user.school || "MIT"}
-                  className="ring-1 ring-gray-300 p-[13px] rounded-md text-sm "
+                  className="ring-1 ring-gray-300 p-[13px] rounded-md text-sm dark:bg-slate-800 dark:ring-slate-700 dark:text-slate-500 "
                   name="school"
                 />
               </div>
@@ -146,7 +153,7 @@ const UpdateUser = ({ user }: { user: User }) => {
                 <input
                   type="text"
                   placeholder={user.work || "Apple Inc."}
-                  className="ring-1 ring-gray-300 p-[13px] rounded-md text-sm "
+                  className="ring-1 ring-gray-300 p-[13px] rounded-md text-sm dark:bg-slate-800 dark:ring-slate-700 dark:text-slate-500 "
                   name="work"
                 />
               </div>
@@ -158,7 +165,7 @@ const UpdateUser = ({ user }: { user: User }) => {
                 <input
                   type="text"
                   placeholder={user.website || "www.etc.com"}
-                  className="ring-1 ring-gray-300 p-[13px] rounded-md text-sm "
+                  className="ring-1 ring-gray-300 p-[13px] rounded-md text-sm dark:bg-slate-800 dark:ring-slate-700 dark:text-slate-500 "
                   name="website"
                 />
               </div>
@@ -171,7 +178,7 @@ const UpdateUser = ({ user }: { user: User }) => {
               <span className="text-red-500">Something went wrong!</span>
             )}
             <div
-              className="absolute text-lg right-2 top-3 cursor-pointer"
+              className="absolute text-lg right-2 top-3 cursor-pointer text-black dark:text-slate-500"
               onClick={handleClose}
             >
               X

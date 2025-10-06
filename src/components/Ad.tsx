@@ -5,7 +5,7 @@ type Props = {};
 
 const Ad = ({ size }: { size: "sm" | "md" | "lg" }) => {
   return (
-    <div className="p-4 bg-white rounded-lg shadow-md text-sm">
+    <div className="p-4 bg-white dark:bg-gray-900 rounded-lg shadow-md text-sm">
       {/* TOP */}
       <div className="flex items-center justify-between text-gray-500 font-medium">
         <span>Sponsored Ads</span>
@@ -37,15 +37,19 @@ const Ad = ({ size }: { size: "sm" | "md" | "lg" }) => {
           />
           <span className="text-blue-500 font-medium">BigChef Lounge</span>
         </div>
-        <p className={size === "sm" ? "text-xs" : "text-sm"}>
+        <p
+          className={`${
+            size === "sm" ? "text-xs" : "text-sm"
+          } text-black dark:text-gray-500`}
+        >
           {size === "sm"
             ? "Lorem ipsum dolor sit amet."
             : size === "md"
             ? "Lorem ipsum dolor sit amet."
             : "Lorem ipsum dolor sit amet."}
         </p>
-        <button className="bg-gray-200 text-gray-500 p-2 text-xs rounded-lg">
-          Learn more
+        <button className="bg-gray-200 dark:text-gray-500 dark:bg-gray-700 text-gray-500 p-2 text-xs rounded-lg">
+          <p className="">Learn more</p>
         </button>
       </div>
     </div>

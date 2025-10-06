@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import React from "react";
+import { useTheme } from "@/context/ThemeContext";
 import MobileMenu from "./MobileMenu";
 import Image from "next/image";
 import {
@@ -15,6 +16,7 @@ import {
 type Props = {};
 
 const Navbar = (props: Props) => {
+  const { theme, toggleTheme } = useTheme();
   return (
     <div className="flex items-center justify-between h-24 ">
       <div className="md:hidden lg:block w-[20%] ">
@@ -55,11 +57,11 @@ const Navbar = (props: Props) => {
             <span>Stories</span>
           </Link>
         </div>
-        <div className="hidden xl:flex p-2 bg-slate-100 items-center rounded-xl">
+        <div className="hidden xl:flex p-2 bg-slate-100 dark:bg-slate-800 items-center rounded-xl">
           <input
             type="text"
             placeholder="search..."
-            className="outline-none bg-transparent"
+            className="outline-none bg-transparent text-black dark:text-gray-500"
           />
           <Image src="/search.png" width={14} height={14} alt="search" />
         </div>
@@ -89,6 +91,20 @@ const Navbar = (props: Props) => {
                 alt="notifications"
               />
             </div>
+            <div className="cursor-pointer">
+              <Image
+                src="/notifications.png"
+                width={24}
+                height={24}
+                alt="notifications"
+              />
+            </div>
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 flex items-center justify-center"
+            >
+              {theme === "light" ? "🌙" : "☀️"}
+            </button>
             <UserButton />
           </SignedIn>
 

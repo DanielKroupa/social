@@ -52,7 +52,7 @@ const UserInfoCard = async ({ user }: { user: User }) => {
   }
 
   return (
-    <div className="p-4 bg-white rounded-lg shadow-md text-sm flex flex-col gap-4">
+    <div className="p-4 bg-white dark:bg-gray-900 rounded-lg shadow-md text-sm flex flex-col gap-4">
       {/* Top  */}
       <div className="flex justify-between items-center font-medium">
         <span className="text-gray-500">User info</span>
@@ -67,7 +67,7 @@ const UserInfoCard = async ({ user }: { user: User }) => {
       {/* Bottom */}
       <div className="flex flex-col gap-4 text-gray-500">
         <div className="flex items-center gap-2">
-          <span className="text-xl text-black">
+          <span className="text-xl text-black dark:text-slate-400">
             {user.name && user.surname
               ? user.name + " " + user.surname
               : user.username}

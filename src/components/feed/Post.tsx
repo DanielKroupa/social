@@ -23,7 +23,7 @@ const Post = async ({ post }: { post: FeedPostType }) => {
             height={40}
             src={post.user.avatar || "/noAvatar.png"}
           />
-          <span className="font-medium">
+          <span className="font-medium text-black dark:text-slate-600">
             {post.user.name && post.user.surname
               ? post.user.name + " " + post.user.surname
               : post.user.username}
@@ -42,7 +42,7 @@ const Post = async ({ post }: { post: FeedPostType }) => {
             />
           </div>
         )}
-        <p>{post.desc} </p>
+        <p className="text-black dark:text-slate-600">{post.desc} </p>
       </div>
       <Suspense fallback="Loading...">
         <PostInteraction
