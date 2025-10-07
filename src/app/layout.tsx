@@ -40,7 +40,7 @@ export default function RootLayout({
           />
         </head>
         <ThemeProvider>
-          <body className={poppins.className}>
+          <body className={`${poppins.className} antialiased`}>
             <div className="w-full bg-white dark:bg-gray-900 md:px-4 lg:px-16 xl:px-32 2xl:px-64">
               <Navbar />
             </div>
