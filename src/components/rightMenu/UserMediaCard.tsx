@@ -33,7 +33,7 @@ const UserMediaCard = async ({ user }: { user: User }) => {
           ? postsWithMedia.map((post) => (
               <div className="relative w-1/5 h-24" key={post.id}>
                 <Image
-                  src={post.img!}
+                  src={post.img! || "/noCover.png"}
                   alt=""
                   fill
                   className="object-cover rounded-md"

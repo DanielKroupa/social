@@ -57,11 +57,12 @@ const Navbar = (props: Props) => {
             <span>Stories</span>
           </Link>
         </div>
-        <div className="hidden xl:flex p-2 bg-slate-100 dark:bg-slate-800 items-center rounded-xl">
+        <div className="focus:outline outline-gray-700 hidden xl:flex p-2 bg-slate-100 dark:bg-slate-800 items-center rounded-xl">
           <input
             type="text"
-            placeholder="search..."
-            className="outline-none bg-transparent text-black dark:text-gray-500"
+            placeholder="Search..."
+            className="outline-none bg-transparent text-black dark:text-gray-500 
+            "
           />
           <Image src="/search.png" width={14} height={14} alt="search" />
         </div>
@@ -81,14 +82,6 @@ const Navbar = (props: Props) => {
                 width={24}
                 height={24}
                 alt="Messages"
-              />
-            </div>
-            <div className="cursor-pointer">
-              <Image
-                src="/notifications.png"
-                width={24}
-                height={24}
-                alt="notifications"
               />
             </div>
             <div className="cursor-pointer">

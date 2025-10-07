@@ -90,12 +90,9 @@ const CommentList = ({
       {/* Comment */}
       <div className="">
         {optimisticComments.map((comment) => (
-          <div
-            className="flex gap-4 justify-between mt-6"
-            key={comment.user.avatar || "noAvatar.png"}
-          >
+          <div className="flex gap-4 justify-between mt-6" key={comment.id}>
             <Image
-              src="https://images.pexels.com/photos/33816285/pexels-photo-33816285.jpeg"
+              src={comment.user.avatar || "noAvatar.png"}
               alt=""
               width={40}
               height={40}
