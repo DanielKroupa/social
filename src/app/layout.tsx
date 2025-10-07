@@ -7,6 +7,7 @@ import { Poppins } from "next/font/google";
 
 import Navbar from "@/components/Navbar";
 import { ThemeProvider } from "@/context/ThemeContext";
+import CookieConsent from "@/components/CookieConsent";
 
 const poppins = Poppins({
   weight: ["400", "500", "600", "700", "800"],
@@ -47,6 +48,7 @@ export default function RootLayout({
             <div className="w-full bg-slate-100 dark:bg-gray-800 md:px-4 lg:px-16 xl:px-32 2xl:px-64">
               {children}
             </div>
+            <CookieConsent />
           </body>
         </ThemeProvider>
       </html>
